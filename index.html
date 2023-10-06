@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>made by mohit paddhariya</title>
+
+    <link rel="stylesheet" href="./assets/css/loader.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1 id="messageBox">To download your resources, click here! 📥👇</h1>
+
+
+        <div class="button-group">
+            <a href="./assets/download/resources.zip" id="download-btn" class="download-btn" data-tilt data-tilt-glare data-tilt-max-glare="0.2" data-tilt data-tilt-scale="1.1">
+                <p>Download Resources</p>
+            </a>
+            <a href="https://www.figma.com/file/Mm5Ne9laZS1NeeLYatPWpQ/Realta?type=design&mode=design&t=xF1cd8iaxaZQLks5-1"
+                id="download-btn" class="download-btn" download data-tilt data-tilt-glare data-tilt-max-glare="0.2" data-tilt data-tilt-scale="1.1" target="_blank">
+                <p>Goto Design File</p>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="loader" style="transition: 1.5s;">
+        <div class="mosaic-loader">
+            <div class="cell d-0"></div>
+            <div class="cell d-1"></div>
+            <div class="cell d-2"></div>
+            <div class="cell d-3"></div>
+            <div class="cell d-1"></div>
+            <div class="cell d-2"></div>
+            <div class="cell d-3"></div>
+            <div class="cell d-4"></div>
+            <div class="cell d-2"></div>
+            <div class="cell d-3"></div>
+            <div class="cell d-4"></div>
+            <div class="cell d-5"></div>
+            <div class="cell d-3"></div>
+            <div class="cell d-4"></div>
+            <div class="cell d-5"></div>
+            <div class="cell d-6"></div>
+        </div>
+    </div>
+    <script src="./assets/js/loader.js"></script>
+    <script src="./assets/js/vanilla-tilt.min.js"></script>
+
+    <script>
+        let download_btn = document.getElementById("download-btn");
+        let messageBox = document.getElementById("messageBox");
+        download_btn.addEventListener("click", function () {
+            messageBox.innerHTML = "Hurry, you just downloaded your starter files 🎉🎉.";
+        });
+        VanillaTilt.init(document.querySelectorAll(".download-btn"), {
+            max: 55,
+            speed: 1200
+        });
+    </script>
+</body>
+
+</html>
